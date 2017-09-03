@@ -1,0 +1,19 @@
+﻿@page
+@model NiceBMICalculatorModel
+@{
+}
+<h2 class="success">@Model.ResultInfo</h2>
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Weight"></label>
+        <input asp-for="Weight" /> kg
+    </div>
+    <div>
+        <label asp-for="Height"></label>
+        <input asp-for="Height" /> cm
+    </div>
+    <br/>
+    <input type="submit" asp-page-handler="Calculate" value="Calculate" />
+    <input type="submit" asp-page-handler="TellPretty" value="Just tell me that I am pretty!" />
+</form>

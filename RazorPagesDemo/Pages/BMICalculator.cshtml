@@ -1,0 +1,19 @@
+﻿@page
+@model BMICalculatorModel
+@{}
+
+<h2>@Model.ResultInfo</h2>
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Weight"></label>
+        <input asp-for="Weight" /> kg
+    </div>
+    <div>
+        <label asp-for="Height"></label>
+        <input asp-for="Height" /> cm
+
+    </div>
+    <br/>
+    <button>Calculate</button>
+</form>
